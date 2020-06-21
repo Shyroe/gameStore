@@ -5,7 +5,7 @@ import avatar from "../../../assets/avatar.png";
 import * as S from "./styles";
 import { categoryList, gameData } from "../../data";
 
-export default () => {
+export default ({ navigation }) => {
   const gamesRef = useRef();
   const [selectedTag, setSelectedTag] = useState("All");
 
@@ -16,17 +16,19 @@ export default () => {
 
   const gameItem = (item) => {
     return (
-      <S.Game>
-        <S.GameCover source={item.cover} />
-        <S.GameInfo backgroundColor={item.backgroundColor}>
-          <S.GameImage source={item.cover} />
-          <S.GameTitle>
-            <Text medium bold>
-              {item.title}
-            </Text>
-            <Text small>{item.teaser}</Text>
-          </S.GameTitle>
-        </S.GameInfo>
+      <S.Game onPress={() => navigation.navigate("Game", { game: item })}>
+        <>
+          <S.GameCover source={item.cover} />
+          <S.GameInfo backgroundColor={item.backgroundColor}>
+            <S.GameImage source={item.cover} />
+            <S.GameTitle>
+              <Text medium bold>
+                {item.title}
+              </Text>
+              <Text small>{item.teaser}</Text>
+            </S.GameTitle>
+          </S.GameInfo>
+        </>
       </S.Game>
     );
   };

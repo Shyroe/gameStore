@@ -44,7 +44,7 @@ export const Dot = styled.View`
 
 export const Games = styled.FlatList``;
 
-export const Game = styled.View`
+export const Game = styled.TouchableHighlight`
   width: 100%;
   margin-bottom: 20px;
 `;

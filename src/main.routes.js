@@ -10,6 +10,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "./pages/Home";
 import Live from "./pages/Live";
 import Profile from "./pages/Profile";
+import Game from "./pages/Game";
 
 const AppStack = createStackNavigator();
 const TabNav = createBottomTabNavigator();
@@ -63,8 +64,9 @@ const TabNavScreen = () => {
 const Routes = () => {
   return (
     <NavigationContainer>
-      <AppStack.Navigator headerMode="none">
+      <AppStack.Navigator mode="modal" headerMode="none">
         <AppStack.Screen name="App" component={TabNavScreen} />
+        <AppStack.Screen name="Game" component={Game} />
       </AppStack.Navigator>
     </NavigationContainer>
   );
