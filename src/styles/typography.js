@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components/native";
 
-const Text = styled.Text`
-  font-family: "Arial";
+export const Text = styled.Text`
+  font-family: "sans-serif";
   color: ${(props) => props.color ?? "#fff"};
 
   ${({ title, large, medium, small }) => {

@@ -25,8 +25,8 @@ export const gameData = [
     rating: 4.5,
     category: ["Action", "Indie"],
     age: "12+",
-    cover: require("./assets/"),
-    screenshots: [require("./assets/")],
+    cover: require("../assets/game1.jpg"),
+    screenshots: [require("../assets/game1.jpg")],
     backgroundColor: "#824571",
   },
   {
@@ -39,8 +39,8 @@ export const gameData = [
     rating: 3.5,
     category: ["Strategy", "Indie"],
     age: "16+",
-    cover: require("./assets/"),
-    screenshots: [require("./assets/")],
+    cover: require("../assets/game2.jpg"),
+    screenshots: [require("../assets/game2.jpg")],
     backgroundColor: "#824571",
   },
   {
@@ -53,8 +53,8 @@ export const gameData = [
     rating: 5,
     category: ["Action", "Indie"],
     age: "13+",
-    cover: require("./assets/"),
-    screenshots: [require("./assets/")],
+    cover: require("../assets/game3.jpg"),
+    screenshots: [require("../assets/game3.jpg")],
     backgroundColor: "#824571",
   },
 ];
