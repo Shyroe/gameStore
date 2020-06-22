@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Text from "../../styles/typography";
 import V from "../../styles/variables";
+import { StatusBar } from "react-native";
 import avatar from "../../../assets/avatar.png";
 import * as S from "./styles";
 import { categoryList, gameData } from "../../data";
@@ -34,6 +35,7 @@ export default ({ navigation }) => {
   };
   return (
     <S.Container>
+      <StatusBar barStyle="light-content" backgroundColor="#343434" />
       <S.Header>
         <Text large>
           Hello{" "}

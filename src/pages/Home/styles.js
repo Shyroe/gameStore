@@ -24,10 +24,10 @@ export const Avatar = styled.Image`
 
 export const WrapperCategory = styled.ScrollView``;
 
-export const CategoryItem = styled.TouchableHighlight`
+export const CategoryItem = styled.TouchableOpacity`
   padding: 5px 8px;
   align-items: center;
-  height: 32px;
+  height: 42px;
   background-color: transparent;
 `;
 
@@ -69,4 +69,7 @@ export const GameImage = styled.Image`
   border-radius: 5px;
   margin-right: 15px;
 `;
-export const GameTitle = styled.View``;
+export const GameTitle = styled.View`
+  width: 74%;
+  margin: 0 24px;
+`;

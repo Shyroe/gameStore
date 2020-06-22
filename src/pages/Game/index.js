@@ -26,61 +26,63 @@ export default function index({ route, navigation }) {
     return <S.Stars>{stars}</S.Stars>;
   };
   return (
-    <S.Container>
-      <StatusBar barStyle="light-content" />
-      <S.GameArtContainer>
-        <S.GameArt source={game.cover} />
-        <S.BackButton onPress={() => navigation.goBack()}>
-          <Ionicons name="ios-close" size={48} color="#fff" />
-        </S.BackButton>
-      </S.GameArtContainer>
+    <>
+      <S.Container>
+        <StatusBar barStyle="light-content" backgroundColor="#343434" />
+        <S.GameArtContainer>
+          <S.GameArt source={game.cover} />
+          <S.BackButton onPress={() => navigation.goBack()}>
+            <Ionicons name="ios-close" size={48} color="#fff" />
+          </S.BackButton>
+        </S.GameArtContainer>
 
-      <S.GameInfoContainer>
-        <S.GameThumbContainer>
-          <S.GameThumb source={game.cover} />
-        </S.GameThumbContainer>
-        <S.GameInfo>
-          <Text heavy medium>
-            {game.title}
+        <S.GameInfoContainer>
+          <S.GameThumbContainer>
+            <S.GameThumb source={game.cover} />
+          </S.GameThumbContainer>
+          <S.GameInfo>
+            <Text heavy medium>
+              {game.title}
+            </Text>
+            <Text color="#9a9a9a">{game.teaser}</Text>
+          </S.GameInfo>
+          <S.Download>
+            <Ionicons name="md-cloud-download" size={24} color="#fff" />
+          </S.Download>
+        </S.GameInfoContainer>
+
+        <S.GameStatsContainer>
+          {renderStars()}
+          <Text heavy color="#9a9a9a">
+            {game.rating}
           </Text>
-          <Text color="#9a9a9a">{game.teaser}</Text>
-        </S.GameInfo>
-        <S.Download>
-          <Ionicons name="md-cloud-download" size={24} color="#fff" />
-        </S.Download>
-      </S.GameInfoContainer>
+          <Text bold color="#9a9a9a">
+            {game.category[0]}
+          </Text>
+          <Text bold color="#9a9a9a">
+            {game.age}
+          </Text>
+          <Text bold color="#9a9a9a">
+            Game of the day
+          </Text>
+        </S.GameStatsContainer>
 
-      <S.GameStatsContainer>
-        {renderStars()}
-        <Text heavy color="#9a9a9a">
-          {game.rating}
-        </Text>
-        <Text bold color="#9a9a9a">
-          {game.category[0]}
-        </Text>
-        <Text bold color="#9a9a9a">
-          {game.age}
-        </Text>
-        <Text bold color="#9a9a9a">
-          Game of the day
-        </Text>
-      </S.GameStatsContainer>
+        <S.ScreenShotsContainer>
+          <S.ScreenShots horizontal={true} showsVerticalScrollIndicator={false}>
+            {game.screenshots.map((screenshot, index) => {
+              return (
+                <S.ScreenShotContainer key={index}>
+                  <S.ScreenShot source={screenshot} />
+                </S.ScreenShotContainer>
+              );
+            })}
+          </S.ScreenShots>
+        </S.ScreenShotsContainer>
 
-      <S.ScreenShotsContainer>
-        <S.ScreenShots horizontal={true} showsVerticalScrollIndicator={false}>
-          {game.screenshots.map((screenshot, index) => {
-            return (
-              <S.ScreenShotContainer key={index}>
-                <S.ScreenShot source={screenshot} />
-              </S.ScreenShotContainer>
-            );
-          })}
-        </S.ScreenShots>
-      </S.ScreenShotsContainer>
-
-      <S.Description medium color="#9a9a9a">
-        {game.description}
-      </S.Description>
-    </S.Container>
+        <S.Description medium color="#9a9a9a">
+          {game.description}
+        </S.Description>
+      </S.Container>
+    </>
   );
 }

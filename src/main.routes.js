@@ -65,7 +65,11 @@ const Routes = () => {
   return (
     <NavigationContainer>
       <AppStack.Navigator mode="modal" headerMode="none">
-        <AppStack.Screen name="App" component={TabNavScreen} />
+        <AppStack.Screen
+          options={{ headerShown: false }}
+          name="App"
+          component={TabNavScreen}
+        />
         <AppStack.Screen name="Game" component={Game} />
       </AppStack.Navigator>
     </NavigationContainer>
