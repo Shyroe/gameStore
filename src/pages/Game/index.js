@@ -65,6 +65,22 @@ export default function index({ route, navigation }) {
           Game of the day
         </Text>
       </S.GameStatsContainer>
+
+      <S.ScreenShotsContainer>
+        <S.ScreenShots horizontal={true} showsVerticalScrollIndicator={false}>
+          {game.screenshots.map((screenshot, index) => {
+            return (
+              <S.ScreenShotContainer key={index}>
+                <S.ScreenShot source={screenshot} />
+              </S.ScreenShotContainer>
+            );
+          })}
+        </S.ScreenShots>
+      </S.ScreenShotsContainer>
+
+      <S.Description medium color="#9a9a9a">
+        {game.description}
+      </S.Description>
     </S.Container>
   );
 }

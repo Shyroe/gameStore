@@ -3,7 +3,7 @@ import styled from "styled-components/native";
 import V from "../../styles/variables";
 import Text from "../../styles/typography";
 
-export const Container = styled.View`
+export const Container = styled.ScrollView`
   background-color: ${V.colors.darkGrey2};
   flex: 1;
 `;
@@ -62,4 +62,23 @@ export const GameStatsContainer = styled.View`
 export const Stars = styled.View`
   flex-direction: row;
 `;
-// export const GameStatsContainer = styled.View``;
+export const ScreenShotsContainer = styled.View`
+  margin: 8px 0;
+`;
+export const ScreenShots = styled.ScrollView``;
+export const ScreenShotContainer = styled.View`
+  padding: 16px;
+  shadow-color: #000;
+  shadow-offset: 1px 1px;
+  shadow-opacity: 0.5;
+  shadow-radius: 5px;
+`;
+export const ScreenShot = styled.Image`
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+`;
+export const Description = styled(Text)`
+  margin: 0px 16px;
+  line-height: 22px;
+`;

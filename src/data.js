@@ -26,8 +26,13 @@ export const gameData = [
     category: ["Action", "Indie"],
     age: "12+",
     cover: require("../assets/game1.jpg"),
-    screenshots: [require("../assets/game1.jpg")],
-    backgroundColor: "#824571",
+    screenshots: [
+      require("../assets/game1.jpg"),
+      require("../assets/game2.jpg"),
+      require("../assets/game3.jpg"),
+      require("../assets/game4.jpg"),
+    ],
+    backgroundColor: "#291F1E",
   },
   {
     id: 2,
@@ -40,8 +45,13 @@ export const gameData = [
     category: ["Strategy", "Indie"],
     age: "16+",
     cover: require("../assets/game2.jpg"),
-    screenshots: [require("../assets/game2.jpg")],
-    backgroundColor: "#824571",
+    screenshots: [
+      require("../assets/game1.jpg"),
+      require("../assets/game2.jpg"),
+      require("../assets/game3.jpg"),
+      require("../assets/game4.jpg"),
+    ],
+    backgroundColor: "#7B886F",
   },
   {
     id: 3,
@@ -54,7 +64,12 @@ export const gameData = [
     category: ["Action", "Indie"],
     age: "13+",
     cover: require("../assets/game3.jpg"),
-    screenshots: [require("../assets/game3.jpg")],
-    backgroundColor: "#824571",
+    screenshots: [
+      require("../assets/game1.jpg"),
+      require("../assets/game2.jpg"),
+      require("../assets/game3.jpg"),
+      require("../assets/game4.jpg"),
+    ],
+    backgroundColor: "#053C5E",
   },
 ];
